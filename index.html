@@ -13,6 +13,17 @@
 </head>
 
 <body class="bg-gray-100 text-gray-900">
+  <script>
+(function () {
+  const PASSWORD = "REPLACE_WITH_YOUR_PASSWORD";
+
+  const entered = prompt("Enter access password:");
+  if (entered !== OSINT2026) {
+    document.body.innerHTML = "<h2 style='text-align:center;margin-top:20%'>Access Denied</h2>";
+    throw new Error("Unauthorized");
+  }
+})();
+</script>
 <div class="max-w-7xl mx-auto p-6">
 
 <div class="flex justify-between items-center mb-4">
