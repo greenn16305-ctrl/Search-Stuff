@@ -12,17 +12,23 @@
 </style>
 </head>
 
-<body class="bg-gray-100 text-gray-900">
-  
-  <script>
+<body class="bg-gray-100 text-gray-900" style="display:none;">
+
+<script>
 (function () {
-  const PASSWORD = "OSINT2026";
+  const PASSWORD = "REPLACE_WITH_YOUR_PASSWORD";
 
   const entered = prompt("Enter access password:");
-  if (entered !== PASSWORD) {
-    document.body.innerHTML = "<h2 style='text-align:center;margin-top:20%'>Access Denied</h2>";
+
+  if (!entered || entered !== PASSWORD) {
+    document.body.innerHTML =
+      "<h2 style='text-align:center;margin-top:20%'>Access Denied</h2>";
+    document.body.style.display = "block";
     throw new Error("Unauthorized");
   }
+
+  // Correct password → show page
+  document.body.style.display = "block";
 })();
 </script>
   
