@@ -62,29 +62,42 @@ Jane Smith"></textarea>
 Run OSINT Search
 </button>
 
-  <hr class="mb-10">
+<hr class="mb-10">
 
-<h2 class="text-xl font-semibold mb-3">📞 Phone Number Lookup</h2>
-<p class="text-sm mb-3">
-Enter a phone number to identify carrier, number type, and other public OSINT data.
-</p>
+<div id="phone-lookup" class="mt-6">
+  <h2 class="text-xl font-semibold mb-3">📞 Phone Number Lookup</h2>
 
-<div class="flex flex-col sm:flex-row gap-3 mb-4">
   <input
     id="phoneInput"
     type="text"
-    class="p-3 border rounded w-full"
+    class="p-3 border rounded w-full mb-3"
     placeholder="+1 555 123 4567"
-/>
-  
-<button
-  id="phoneRunBtn"
-  type="button"
-  class="px-4 py-3 bg-indigo-600 text-white rounded"
->
-  Run Phone Lookup
-</button>
-  
+  >
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 mb-4">
+    <label class="flex items-center gap-2 border p-2 rounded text-sm">
+      <input type="checkbox" class="phone-src" data-url="https://www.numlookup.com/lookup/">
+      NumLookup
+    </label>
+
+    <label class="flex items-center gap-2 border p-2 rounded text-sm">
+      <input type="checkbox" class="phone-src" data-url="https://thatsthem.com/phone/">
+      ThatsThem
+    </label>
+
+    <label class="flex items-center gap-2 border p-2 rounded text-sm">
+      <input type="checkbox" class="phone-src" data-url="https://www.whitepages.com/phone/">
+      Whitepages
+    </label>
+  </div>
+
+  <button
+    id="phoneRunBtn"
+    type="button"
+    class="px-4 py-3 bg-indigo-600 text-white rounded"
+  >
+    Run Phone Lookup
+  </button>
 </div>
 
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 mb-6">
