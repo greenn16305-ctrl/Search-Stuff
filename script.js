@@ -1,3 +1,4 @@
+console.log("script.js loaded");
 // V6 base + V7 per-category Select All / Clear buttons (no removals)
 // Edit the categories below to match your exact V6 list if needed.
 
