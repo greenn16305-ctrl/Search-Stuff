@@ -12,7 +12,7 @@
 </style>
 </head>
 
-<body class="bg-gray-100 text-gray-900" style="display:none;">
+<body class="bg-gray-100 text-gray-900">
 
 <script>
 (function () {
@@ -20,15 +20,10 @@
 
   const entered = prompt("Enter access password:");
 
-  if (!entered || entered !== PASSWORD) {
-    document.body.innerHTML =
-      "<h2 style='text-align:center;margin-top:20%'>Access Denied</h2>";
-    document.body.style.display = "block";
-    throw new Error("Unauthorized");
+  if (entered !== PASSWORD) {
+    alert("Access denied");
+    window.location.replace("about:blank");
   }
-
-  // Correct password → show page
-  document.body.style.display = "block";
 })();
 </script>
   
