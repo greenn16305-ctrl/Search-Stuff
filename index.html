@@ -62,6 +62,55 @@ Jane Smith"></textarea>
 Run OSINT Search
 </button>
 
+  <hr class="mb-10">
+
+<h2 class="text-xl font-semibold mb-3">📞 Phone Number Lookup</h2>
+<p class="text-sm mb-3">
+Enter a phone number to identify carrier, number type, and other public OSINT data.
+</p>
+
+<div class="flex flex-col sm:flex-row gap-3 mb-4">
+  <input
+    id="phoneInput"
+    type="text"
+    class="p-3 border rounded w-full"
+    placeholder="+1 555 123 4567"
+  >
+  <button
+    onclick="runPhoneLookup()"
+    class="px-4 py-3 bg-indigo-600 text-white rounded"
+  >
+    Run Phone Lookup
+  </button>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 mb-6">
+  <label class="flex items-center gap-2 border p-2 rounded dark-card text-sm">
+    <input type="checkbox" class="phone-src" data-url="https://www.numlookup.com/lookup/">
+    NumLookup (carrier / type)
+  </label>
+
+  <label class="flex items-center gap-2 border p-2 rounded dark-card text-sm">
+    <input type="checkbox" class="phone-src" data-url="https://www.truecaller.com/search/">
+    Truecaller (name / spam)
+  </label>
+
+  <label class="flex items-center gap-2 border p-2 rounded dark-card text-sm">
+    <input type="checkbox" class="phone-src" data-url="https://thatsthem.com/phone/">
+    ThatsThem (public records)
+  </label>
+
+  <label class="flex items-center gap-2 border p-2 rounded dark-card text-sm">
+    <input type="checkbox" class="phone-src" data-url="https://www.spytox.com/people/search?phone=">
+    Spytox (OSINT phone data)
+  </label>
+
+  <label class="flex items-center gap-2 border p-2 rounded dark-card text-sm">
+    <input type="checkbox" class="phone-src" data-url="https://www.whitepages.com/phone/">
+    Whitepages (limited free)
+  </label>
+</div>
+  
 <hr class="mb-10">
 
 <h2 class="text-2xl font-bold mb-4">OSINT Query Guide (How to Search)</h2>
