@@ -1,4 +1,3 @@
-console.log("script.js loaded");
 // V6 base + V7 per-category Select All / Clear buttons (no removals)
 // Edit the categories below to match your exact V6 list if needed.
 
@@ -159,10 +158,12 @@ document.getElementById("modeBtn").onclick = () => {
   document.querySelectorAll("input, textarea").forEach(el => el.classList.toggle("dark-input"));
 };
 
-function runPhoneLookup() {
+window.runPhoneLookup = function () {
+  console.log("runPhoneLookup fired");
+
   const input = document.getElementById("phoneInput");
   if (!input) {
-    alert("Phone input not found");
+    alert("phoneInput not found");
     return;
   }
 
@@ -172,15 +173,14 @@ function runPhoneLookup() {
     return;
   }
 
-  const encoded = encodeURIComponent(phone);
-  const selected = document.querySelectorAll(".phone-src:checked");
-
-  if (selected.length === 0) {
-    alert("Select at least one phone lookup source");
+  const checked = document.querySelectorAll(".phone-src:checked");
+  if (checked.length === 0) {
+    alert("Select at least one lookup source");
     return;
   }
 
-  selected.forEach(cb => {
+  const encoded = encodeURIComponent(phone);
+  checked.forEach(cb => {
     window.open(cb.dataset.url + encoded, "_blank");
   });
-}
+};
