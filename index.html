@@ -5,11 +5,25 @@
 <title>OSINT Search</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.tailwindcss.com"></script>
+
 <style>
 .dark-input{background:#1f2937!important;color:#f9fafb!important;border-color:#4b5563!important}
 .dark-card{background:#1f2937!important;color:#f9fafb!important;border-color:#4b5563!important}
-.cat-btn{font-size:0.75rem;padding:2px 6px;border-radius:4px}
+
+/* FIX: readable instructions panel in night mode */
+body.bg-gray-900 details {
+  background:#1f2937!important;
+  color:#f9fafb!important;
+}
+body.bg-gray-900 details summary {
+  color:#f9fafb!important;
+}
+body.bg-gray-900 details p,
+body.bg-gray-900 details li {
+  color:#e5e7eb!important;
+}
 </style>
+
 </head>
 
 <body class="bg-gray-100 text-gray-900">
